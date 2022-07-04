@@ -1,0 +1,30 @@
+[
+    {
+        "ParameterKey": "EnvironmentName",
+        "ParameterValue": "UdacityProject"
+    },
+    {
+        "ParameterKey": "ImageId",
+        "ParameterValue": "ami-0729e439b6769d6ab"
+    },
+    {
+        "ParameterKey": "KeyName",
+        "ParameterValue": "UdacityProjectKey"
+    },
+    {
+        "ParameterKey": "InstanceVolume",
+        "ParameterValue": "10"
+    },
+    {
+        "ParameterKey": "InstanceType",
+        "ParameterValue": "t2.medium"
+    },
+    {
+        "ParameterKey": "S3Name",
+        "ParameterValue": "my1973646bucketwebsite"
+    },
+    {
+        "ParameterKey": "IAMRole",
+        "ParameterValue": "UdacityEC2-S3"
+    }
+]
