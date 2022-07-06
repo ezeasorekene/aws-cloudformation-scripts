@@ -88,6 +88,8 @@ Resources:
           apt-get install unzip awscli -y
           apt-get install apache2 -y
           systemctl start apache2.service
+          cd /var/www/html
+          echo "Udagram Web Server Up and Running! By Ekene Ezeasor ALX/Udacity @2022" > index.html
       ImageId: !Ref ImageId
       KeyName: !Ref KeyName
       SecurityGroups:
