@@ -8,10 +8,6 @@
         "ParameterValue": "ami-0729e439b6769d6ab"
     },
     {
-        "ParameterKey": "KeyName",
-        "ParameterValue": "UdacityProjectKey"
-    },
-    {
         "ParameterKey": "InstanceVolume",
         "ParameterValue": "10"
     },
