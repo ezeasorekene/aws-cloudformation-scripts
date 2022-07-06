@@ -22,9 +22,5 @@
     {
         "ParameterKey": "S3Name",
         "ParameterValue": "my1973646bucketwebsite"
-    },
-    {
-        "ParameterKey": "IAMRole",
-        "ParameterValue": "UdacityEC2-S3"
     }
 ]

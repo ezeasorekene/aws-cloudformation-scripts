@@ -31,10 +31,6 @@ Parameters:
     Type: String
     Description: Choose your S3 Bucket Name
 
-  IAMRole:
-    Type: String
-    Description: Choose your IAM Role
-
 
 
 # Specify server resources
@@ -92,7 +88,6 @@ Resources:
           apt-get install unzip awscli -y
           apt-get install apache2 -y
           systemctl start apache2.service
-          echo "Udagram Web Server Up and Running!" > index.html
       ImageId: !Ref ImageId
       KeyName: !Ref KeyName
       SecurityGroups:
@@ -111,8 +106,8 @@ Resources:
         - Fn::ImportValue: !Sub "${EnvironmentName}-PRIV-NETS"
       LaunchConfigurationName:
         Ref: WebAppLaunchConfig
-      MinSize: "1"
-      MaxSize: "2"
+      MinSize: "2"
+      MaxSize: "4"
       TargetGroupARNs:
         - Ref: WebAppTargetGroup
 
@@ -198,7 +193,7 @@ Resources:
     Properties:
       Path: "/"
       Roles:
-        - !Ref IAMRole
+        - !Ref IamRole
 
 ############################### Output #################################
 
