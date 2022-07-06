@@ -15,9 +15,9 @@ Parameters:
     Description: Choose an appropriate image with reference to region
     Type: AWS::EC2::Image::Id
 
-  KeyName:
-    Description: SSH Keypair to login to the instance
-    Type: AWS::EC2::KeyPair::KeyName
+  # KeyName:
+  #   Description: SSH Keypair to login to the instance
+  #   Type: AWS::EC2::KeyPair::KeyName
 
   InstanceVolume:
     Description: Choose your instance volume
@@ -91,7 +91,7 @@ Resources:
           cd /var/www/html
           echo "Udagram Web Server Up and Running! By Ekene Ezeasor ALX/Udacity @2022" > index.html
       ImageId: !Ref ImageId
-      KeyName: !Ref KeyName
+      # KeyName: !Ref KeyName
       SecurityGroups:
         - Ref: WebServerSecGroup
       InstanceType: !Ref InstanceType
@@ -108,7 +108,7 @@ Resources:
         - Fn::ImportValue: !Sub "${EnvironmentName}-PRIV-NETS"
       LaunchConfigurationName:
         Ref: WebAppLaunchConfig
-      MinSize: "2"
+      MinSize: "1"
       MaxSize: "4"
       TargetGroupARNs:
         - Ref: WebAppTargetGroup
